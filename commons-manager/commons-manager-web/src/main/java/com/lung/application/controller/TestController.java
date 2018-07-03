@@ -1,9 +1,12 @@
 package com.lung.application.controller;
 
 import com.lung.application.inter.TestService;
+import com.lung.application.pojo.AreaInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -25,5 +28,12 @@ public class TestController {
         Integer result = testService.getResult();
         System.out.println("this is controller ......"+result);
         return new ModelAndView("index");
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "queryAreaInfo")
+    public AreaInfo queryAreaInfo(@RequestParam Long areaCode) {
+        AreaInfo areaInfo = testService.queryAreaInfo(areaCode);
+        return areaInfo;
     }
 }

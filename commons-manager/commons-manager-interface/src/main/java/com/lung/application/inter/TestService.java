@@ -1,5 +1,7 @@
 package com.lung.application.inter;
 
+import com.lung.application.pojo.AreaInfo;
+
 /**
  * @Title: TestService
  * @Author: long-zp
@@ -10,4 +12,6 @@ package com.lung.application.inter;
 public interface TestService {
 
     Integer getResult();
+
+    AreaInfo queryAreaInfo(Long areaCode);
 }
