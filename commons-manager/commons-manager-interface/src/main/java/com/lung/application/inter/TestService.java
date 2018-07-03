@@ -1,4 +1,4 @@
-package com.lung.application.service;
+package com.lung.application.inter;
 
 /**
  * @Title: TestService

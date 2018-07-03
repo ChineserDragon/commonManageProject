@@ -1,6 +1,6 @@
-package com.lung.application.service.impl;
+package com.lung.application.service;
 
-import com.lung.application.service.TestService;
+import com.lung.application.inter.TestService;
 import org.springframework.stereotype.Service;
 
 /**
