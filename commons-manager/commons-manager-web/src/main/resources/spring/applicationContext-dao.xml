@@ -63,7 +63,7 @@
         <property name="dataSource" ref="dataSource"/>
         <!-- 加载mybatis的全局配置文件 -->
         <property name="configLocation" value="classpath:mybatis/sqlMapConfig.xml"/>
-        <!--<property name="mapperLocations" value="classpath:mapper/**/*Mapper.xml"></property>-->
+        <property name="mapperLocations" value="classpath:mapper/**/*Mapper.xml"></property>
         <!-- 这里另外配置mapper.xml路径 -->
     </bean>
 
