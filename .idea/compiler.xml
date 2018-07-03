@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="commons-manager-dao" />
+        <module name="commons-manager-interface" />
+        <module name="commons-manager-pojo" />
+        <module name="commons-manager-service" />
+        <module name="commons-manager-web" />
+        <module name="commons-utils" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="commons-manager" target="1.7" />
+      <module name="commons-manager-dao" target="1.7" />
+      <module name="commons-manager-interface" target="1.7" />
+      <module name="commons-manager-pojo" target="1.7" />
+      <module name="commons-manager-service" target="1.7" />
+      <module name="commons-manager-web" target="1.7" />
+      <module name="commons-parent" target="1.7" />
+      <module name="commons-utils" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/commons-manager/commons-manager.iml" filepath="$PROJECT_DIR$/commons-manager/commons-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-manager/commons-manager-dao/commons-manager-dao.iml" filepath="$PROJECT_DIR$/commons-manager/commons-manager-dao/commons-manager-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-manager/commons-manager-interface/commons-manager-interface.iml" filepath="$PROJECT_DIR$/commons-manager/commons-manager-interface/commons-manager-interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-manager/commons-manager-pojo/commons-manager-pojo.iml" filepath="$PROJECT_DIR$/commons-manager/commons-manager-pojo/commons-manager-pojo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-manager/commons-manager-service/commons-manager-service.iml" filepath="$PROJECT_DIR$/commons-manager/commons-manager-service/commons-manager-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-manager/commons-manager-web/commons-manager-web.iml" filepath="$PROJECT_DIR$/commons-manager/commons-manager-web/commons-manager-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-parent/commons-parent.iml" filepath="$PROJECT_DIR$/commons-parent/commons-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-utils/commons-utils.iml" filepath="$PROJECT_DIR$/commons-utils/commons-utils.iml" />
+    </modules>
+  </component>
+</project>
