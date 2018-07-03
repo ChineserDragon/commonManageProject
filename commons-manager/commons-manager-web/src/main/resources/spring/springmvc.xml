@@ -12,23 +12,21 @@
     <mvc:default-servlet-handler/>
     <!--能支持springmvc更高级的一些功能，JSR303校验，快捷的ajax...映射动态请求 -->
     <mvc:annotation-driven>
-        <mvc:message-converters register-defaults="true">
-            <bean class="com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter">
-                <property name="supportedMediaTypes">
-                    <list>
-                        <value>text/html;charset=UTF-8</value>
-                        <value>application/json</value>
-                    </list>
-                </property>
-                <property name="features">
-                    <array>
-                        <value>WriteNullStringAsEmpty</value>
-                    </array>
-                </property>
-                <property name="dateFormat" value="yyyy-MM-dd HH:mm:ss"/>
-            </bean>
+        <mvc:message-converters>
+            <ref bean="jsonMessageConverter"/>
         </mvc:message-converters>
     </mvc:annotation-driven>
+
+    <!--jackson配置json为空不输出-->
+    <bean id="jsonMessageConverter"
+          class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+        <property name="objectMapper">
+            <bean class="com.fasterxml.jackson.databind.ObjectMapper">
+                <!-- 设置不输出null字段-->
+                <property name="serializationInclusion" value="NON_NULL"/>
+            </bean>
+        </property>
+    </bean>
 
     <!--3.配置视图解析器，方便页面返回-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
