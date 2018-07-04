@@ -2,6 +2,8 @@ package com.lung.common.controller;
 
 import com.lung.common.beans.Result;
 import com.lung.common.beans.ResultInfo;
+import com.lung.common.redis.BaseRedisDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -18,6 +20,9 @@ import javax.servlet.http.HttpServletResponse;
  */
 @Controller
 public class SuperController {
+
+    @Autowired
+    protected BaseRedisDao baseRedisDao;
 
     protected HttpServletRequest request;
 

@@ -25,10 +25,11 @@ public class TestController extends SuperController {
     @Autowired
     TestService testService;
 
+
     @RequestMapping(value = "home")
-    public ModelAndView toHome(){
+    public ModelAndView toHome() {
         Integer result = testService.getResult();
-        System.out.println("this is controller ......"+result);
+        System.out.println("this is controller ......" + result);
         return new ModelAndView("index");
     }
 
@@ -37,5 +38,16 @@ public class TestController extends SuperController {
     public ResultInfo queryAreaInfo(@RequestParam Long areaCode) {
         AreaInfo areaInfo = testService.queryAreaInfo(areaCode);
         return success(areaInfo);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "testRedis")
+    public ResultInfo testRedisConfig() throws Exception {
+        boolean set = baseRedisDao.set("tikect", "this is redis test data");
+
+        if (set) {
+            return success("success");
+        }
+        return error("fail");
     }
 }
