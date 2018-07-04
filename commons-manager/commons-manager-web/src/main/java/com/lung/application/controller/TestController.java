@@ -4,6 +4,7 @@ import com.lung.application.inter.TestService;
 import com.lung.application.pojo.AreaInfo;
 import com.lung.common.beans.ResultInfo;
 import com.lung.common.controller.SuperController;
+import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +21,7 @@ import org.springframework.web.servlet.ModelAndView;
  **/
 @Controller
 @RequestMapping(value = "test")
+@Log
 public class TestController extends SuperController {
 
     @Autowired
@@ -29,7 +31,8 @@ public class TestController extends SuperController {
     @RequestMapping(value = "home")
     public ModelAndView toHome() {
         Integer result = testService.getResult();
-        System.out.println("this is controller ......" + result);
+        log.info("this is controller ......" + result);
+//        System.out.println("this is controller ......" + result);
         return new ModelAndView("index");
     }
 
