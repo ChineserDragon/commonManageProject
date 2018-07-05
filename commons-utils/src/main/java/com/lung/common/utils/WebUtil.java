@@ -15,7 +15,7 @@ import java.util.Map;
  * @Title: WebUtil
  * @Author: long-zp
  * @Date: 2018/7/4 12:36
- * @version: V1.0
+ * @version: V1.1
  * @Description: Created with IntelliJ IDEA.
  **/
 public class WebUtil {
