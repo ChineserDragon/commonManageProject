@@ -94,6 +94,11 @@
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-redis</artifactId>
         </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>com.baomidou</groupId>-->
+            <!--<artifactId>mybatis-plus</artifactId>-->
+        <!--</dependency>-->
     </dependencies>
 
     <build>

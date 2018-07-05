@@ -58,13 +58,33 @@
     </bean>
 
     <!--3.sqlSessionFactory 配置和MyBatis的整合 -->
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+    <bean id="sqlSessionFactory" class="com.baomidou.mybatisplus.spring.MybatisSqlSessionFactoryBean">
         <!-- 数据库连接池 -->
         <property name="dataSource" ref="dataSource"/>
         <!-- 加载mybatis的全局配置文件 -->
         <property name="configLocation" value="classpath:mybatis/sqlMapConfig.xml"/>
         <property name="mapperLocations" value="classpath:mapper/**/*Mapper.xml"></property>
         <!-- 这里另外配置mapper.xml路径 -->
+        <property name="plugins">
+            <array>
+                <!-- 分页插件配置 -->
+                <bean id="paginationInterceptor"
+                      class="com.baomidou.mybatisplus.plugins.PaginationInterceptor">
+                    <property name="localPage" value="true" /><!-- 默认 false 改为
+						true 开启了 pageHeper 支持、可以没有 -->
+                </bean>
+            </array>
+        </property>
+        <!-- 全局配置注入 -->
+        <property name="globalConfig" ref="globalConfig" />
+    </bean>
+
+    <bean id="globalConfig" class="com.baomidou.mybatisplus.entity.GlobalConfiguration">
+        <property name="idType" value="0" />
+        <!-- 数据库类型配置 -->
+        <property name="dbType" value="mysql" />
+        <!-- 全局表为下划线命名设置 true -->
+        <property name="dbColumnUnderline" value="true" />
     </bean>
 
     <!--4. 配置mybatis扫描器， -->
@@ -75,12 +95,5 @@
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
     </bean>
 
-    <!--4.2  (可选)配置一个可以执行批量的sqlSession-->
-    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
-        <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory">
-        </constructor-arg>
-        <constructor-arg name="executorType" value="BATCH">
-        </constructor-arg>
-    </bean>
 
 </beans>

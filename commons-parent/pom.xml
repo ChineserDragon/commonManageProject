@@ -23,6 +23,7 @@
         <mybatis.version>3.2.8</mybatis.version>
         <mybatis.spring.version>1.2.2</mybatis.spring.version>
         <mybatis.paginator.version>1.2.15</mybatis.paginator.version>
+        <mybatis-plus.version>2.1.6</mybatis-plus.version>
         <mysql.version>5.1.32</mysql.version>
         <slf4j.version>1.6.4</slf4j.version>
         <jackson.version>2.4.2</jackson.version>
@@ -117,7 +118,7 @@
             </dependency>
 
             <!-- Mybatis -->
-            <dependency>
+            <!--<dependency>
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis</artifactId>
                 <version>${mybatis.version}</version>
@@ -131,11 +132,16 @@
                 <groupId>com.github.miemiedev</groupId>
                 <artifactId>mybatis-paginator</artifactId>
                 <version>${mybatis.paginator.version}</version>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper</artifactId>
                 <version>${pagehelper.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus</artifactId>
+                <version>${mybatis-plus.version}</version>
             </dependency>
             <!-- MySql -->
             <dependency>

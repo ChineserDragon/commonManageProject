@@ -12,6 +12,13 @@
     <artifactId>commons-manager-pojo</artifactId>
     <packaging>jar</packaging>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+        </dependency>
+    </dependencies>
+
     <build>
         <finalName>${project.artifactId}</finalName>
     </build>
