@@ -26,7 +26,7 @@ public class BaseRedisDaoImpl extends SuperRedisDao<String, String> implements B
             if (StringUtils.isEmpty(key)) {
                 throw new RuntimeException("key 为空");
             }
-            HashOperations<String, Object, Object> stringObjectObjectHashOperations = template.opsForHash();
+            HashOperations<String, Object, Object> stringObjectObjectHashOperations = redisTemplate.opsForHash();
             stringObjectObjectHashOperations.putAll(key, map);
             return true;
         } catch (Exception e) {
@@ -45,9 +45,9 @@ public class BaseRedisDaoImpl extends SuperRedisDao<String, String> implements B
         if (time <= 0) {
             throw new RuntimeException("时间小于0");
         }
-        HashOperations<String, String, String> op = template.opsForHash();
+        HashOperations<String, String, String> op = redisTemplate.opsForHash();
         op.putAll(key, map);
-        template.expire(key, time, unit);
+        redisTemplate.expire(key, time, unit);
         return true;
     }
 
@@ -80,7 +80,7 @@ public class BaseRedisDaoImpl extends SuperRedisDao<String, String> implements B
         if (StringUtils.isEmpty(key)) {
             throw new RuntimeException(" key为空 ");
         }
-        ValueOperations<String, String> op = template.opsForValue();
+        ValueOperations<String, String> op = redisTemplate.opsForValue();
         op.set(key, value);
         return true;
     }
@@ -88,7 +88,7 @@ public class BaseRedisDaoImpl extends SuperRedisDao<String, String> implements B
     @Override
     public boolean set(String key, String value, long timeout, TimeUnit unit) throws Exception {
         try {
-            ValueOperations<String, String> op = template.opsForValue();
+            ValueOperations<String, String> op = redisTemplate.opsForValue();
             if (null == unit) {
                 throw new RuntimeException("时间单位为空");
             }
@@ -112,7 +112,7 @@ public class BaseRedisDaoImpl extends SuperRedisDao<String, String> implements B
             throw new RuntimeException(" key为空 ");
         }
         try {
-            ValueOperations<String, String> op = template.opsForValue();
+            ValueOperations<String, String> op = redisTemplate.opsForValue();
             String value = op.get(key);
             return value;
         } catch (Exception e) {
@@ -127,7 +127,7 @@ public class BaseRedisDaoImpl extends SuperRedisDao<String, String> implements B
             throw new RuntimeException(" key为空 ");
         }
         try {
-            HashOperations<String, String, String> op = template.opsForHash();
+            HashOperations<String, String, String> op = redisTemplate.opsForHash();
             return op.get(key, field);
         } catch (Exception e) {
             e.printStackTrace();
@@ -145,7 +145,7 @@ public class BaseRedisDaoImpl extends SuperRedisDao<String, String> implements B
         if (StringUtils.isEmpty(key)) {
             throw new RuntimeException(" key为空 ");
         }
-        HashOperations<String, String, String> op = template.opsForHash();
+        HashOperations<String, String, String> op = redisTemplate.opsForHash();
         return op.increment(key, field, val);
     }
 
@@ -154,7 +154,7 @@ public class BaseRedisDaoImpl extends SuperRedisDao<String, String> implements B
         if (StringUtils.isEmpty(key)) {
             throw new RuntimeException(" key为空");
         }
-        HashOperations<String, String, String> op = template.opsForHash();
+        HashOperations<String, String, String> op = redisTemplate.opsForHash();
         return op.increment(key, field, val);
     }
 
@@ -166,7 +166,7 @@ public class BaseRedisDaoImpl extends SuperRedisDao<String, String> implements B
         Map<String, String> map = new HashMap<String, String>();
         if (!StringUtils.isEmpty(key)) {
             try {
-                HashOperations<String, String, String> op = template.opsForHash();
+                HashOperations<String, String, String> op = redisTemplate.opsForHash();
                 map = op.entries(key);
             } catch (Exception e) {
                 e.printStackTrace();
@@ -180,12 +180,12 @@ public class BaseRedisDaoImpl extends SuperRedisDao<String, String> implements B
         if (StringUtils.isEmpty(key)) {
             throw new RuntimeException(" key为空 ");
         }
-        template.delete(key);
+        redisTemplate.delete(key);
 
     }
 
     @Override
     public boolean expire(String key, long time, TimeUnit unit) throws Exception {
-        return template.expire(key, time, unit);
+        return redisTemplate.expire(key, time, unit);
     }
 }

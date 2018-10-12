@@ -95,15 +95,15 @@
             <artifactId>aopalliance</artifactId>
         </dependency>
 
-        <!--redis依赖-->
-        <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-redis</artifactId>
-        </dependency>
+        <!--redis依赖--> <!--commons-util 已经引入了-->
+        <!--<dependency>-->
+            <!--<groupId>redis.clients</groupId>-->
+            <!--<artifactId>jedis</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.data</groupId>-->
+            <!--<artifactId>spring-data-redis</artifactId>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>com.alibaba</groupId>

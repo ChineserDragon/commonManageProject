@@ -12,13 +12,13 @@ import org.springframework.data.redis.core.RedisTemplate;
  **/
 public abstract class SuperRedisDao<K, V> {
     @Autowired
-    protected RedisTemplate<K,V> template;
+    protected RedisTemplate<K,V> redisTemplate;
 
     public RedisTemplate<K, V> getTemplate() {
-        return template;
+        return redisTemplate;
     }
 
     public void setTemplate(RedisTemplate<K, V> template) {
-        this.template = template;
+        this.redisTemplate = template;
     }
 }
