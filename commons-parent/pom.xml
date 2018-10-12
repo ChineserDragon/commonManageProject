@@ -11,13 +11,14 @@
     <modules>
         <module>../commons-utils</module>
         <module>../commons-manager</module>
+        <module>../commons-config</module>
     </modules>
 
 
     <!-- 集中定义依赖版本号-->
     <properties>
         <junit.version>4.12</junit.version>
-        <spring.version>4.2.4.RELEASE</spring.version>
+        <spring.version>4.3.13.RELEASE</spring.version>
         <aspectjweaver.version>1.6.8</aspectjweaver.version>
         <aopalliance.version>1.0</aopalliance.version>
         <mybatis.version>3.2.8</mybatis.version>
@@ -26,7 +27,7 @@
         <mybatis-plus.version>2.1.6</mybatis-plus.version>
         <mysql.version>5.1.32</mysql.version>
         <slf4j.version>1.6.4</slf4j.version>
-        <jackson.version>2.4.2</jackson.version>
+        <jackson.version>2.8.7</jackson.version>
         <fastjson.version>1.2.38</fastjson.version>
         <druid.version>1.0.9</druid.version>
         <httpclient.version>4.3.5</httpclient.version>
