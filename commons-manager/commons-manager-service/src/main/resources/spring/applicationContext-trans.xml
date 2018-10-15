@@ -24,13 +24,17 @@
     <!--配置通知-->
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
         <tx:attributes>
-            <tx:method name="sava" propagation="REQUIRED"/>
+            <tx:method name="sava*" propagation="REQUIRED"/>
+            <tx:method name="add*" propagation="REQUIRED"/>
             <tx:method name="insert*" propagation="REQUIRED"/>
             <tx:method name="update*" propagation="REQUIRED"/>
             <tx:method name="delete*" propagation="REQUIRED"/>
+            <tx:method name="edit*" propagation="REQUIRED"/>
             <tx:method name="find*" propagation="SUPPORTS" read-only="true"/>
             <tx:method name="select*" propagation="SUPPORTS" read-only="true"/>
+            <tx:method name="query*" propagation="SUPPORTS" read-only="true"/>
             <tx:method name="get*" propagation="SUPPORTS" read-only="true"/>
+            <tx:method name="*" rollback-for="Excation"/>
         </tx:attributes>
     </tx:advice>
 
