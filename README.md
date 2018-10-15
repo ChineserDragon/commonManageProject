@@ -1,4 +1,4 @@
-# commonManageProject 该分支是dubbo+zookeeper构建的微服务项目
+# 该分支是dubbo+zookeeper构建的微服务项目
 
 分层多模块web项目
 SpringMVC+Spring+mybatis-plus 集成redis
