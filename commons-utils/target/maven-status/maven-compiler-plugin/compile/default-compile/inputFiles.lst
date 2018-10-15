@@ -6,4 +6,5 @@
 /home/lung/IdeaProjects/commonManageProject/commons-utils/src/main/java/com/lung/common/utils/PropertyPlaceholder.java
 /home/lung/IdeaProjects/commonManageProject/commons-utils/src/main/java/com/lung/common/redis/SuperRedisDao.java
 /home/lung/IdeaProjects/commonManageProject/commons-utils/src/main/java/com/lung/common/redis/impl/BaseRedisDaoImpl.java
+/home/lung/IdeaProjects/commonManageProject/commons-utils/src/main/java/com/lung/common/utils/ManagerBeansName.java
 /home/lung/IdeaProjects/commonManageProject/commons-utils/src/main/java/com/lung/common/redis/BaseRedisDao.java

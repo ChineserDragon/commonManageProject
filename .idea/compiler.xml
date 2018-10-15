@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="commons-config" />
         <module name="commons-manager-dao" />
         <module name="commons-manager-interface" />
         <module name="commons-manager-pojo" />
@@ -15,6 +16,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="commons-config" target="1.7" />
       <module name="commons-manager" target="1.7" />
       <module name="commons-manager-dao" target="1.7" />
       <module name="commons-manager-interface" target="1.7" />
