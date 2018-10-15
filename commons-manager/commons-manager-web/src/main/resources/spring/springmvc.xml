@@ -13,7 +13,7 @@
     <!--<context:property-placeholder ignore-unresolvable="true" location="classpath*:config.properties"/>-->
     <!--1. 扫描 -->
     <context:component-scan
-            base-package="com.lung.application.controller,com.lung.common.controller,com.lung.common.utils">
+            base-package="com.lung.application,com.lung.common.controller,com.lung.common.utils">
         <!--<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>-->
     </context:component-scan>
     <!--2.两个标准配置 -->
