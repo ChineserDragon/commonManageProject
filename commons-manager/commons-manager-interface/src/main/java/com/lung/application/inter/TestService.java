@@ -14,4 +14,6 @@ public interface TestService {
     Integer getResult();
 
     AreaInfo queryAreaInfo(Long areaCode);
+
+    Boolean saveUser();
 }

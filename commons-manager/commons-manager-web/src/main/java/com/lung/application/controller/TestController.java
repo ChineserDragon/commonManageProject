@@ -53,4 +53,17 @@ public class TestController extends SuperController {
         }
         return error("fail");
     }
+
+    @RequestMapping("trans")
+    @ResponseBody
+    public ResultInfo testTrans() {
+        Boolean aBoolean = null;
+        try {
+            aBoolean = testService.saveUser();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return error("fail");
+        }
+        return error("success");
+    }
 }
