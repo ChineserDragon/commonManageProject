@@ -52,6 +52,7 @@
         <freemarker.version>2.3.23</freemarker.version>
         <quartz.version>2.2.2</quartz.version>
         <lombok.version>1.18.0</lombok.version>
+        <velocity.version>1.7</velocity.version>
     </properties>
 
     <dependencyManagement>
@@ -143,6 +144,11 @@
                 <groupId>com.baomidou</groupId>
                 <artifactId>mybatis-plus</artifactId>
                 <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity</artifactId>
+                <version>${velocity.version}</version>
             </dependency>
             <!-- MySql -->
             <dependency>

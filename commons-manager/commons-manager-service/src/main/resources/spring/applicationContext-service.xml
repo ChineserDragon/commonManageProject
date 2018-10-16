@@ -8,7 +8,7 @@
        http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- 扫描包Service实现类 -->
-    <context:component-scan base-package="com.lung.application.service"/>
+    <context:component-scan base-package="com.lung.application"/>
     <!--<context:component-scan base-package="com.lung.application.inter"/>-->
 
 </beans>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lung.application.test.mapper.ResourceMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.lung.application.test.entity.Resource">
+        <id column="resource_id" property="resourceId" />
+        <result column="name" property="name" />
+        <result column="icon" property="icon" />
+        <result column="component" property="component" />
+        <result column="title" property="title" />
+        <result column="path" property="path" />
+        <result column="sort" property="sort" />
+        <result column="parent_id" property="parentId" />
+        <result column="description" property="description" />
+        <result column="is_available" property="isAvailable" />
+        <result column="hidden" property="hidden" />
+        <result column="redirect" property="redirect" />
+        <result column="alwaysShow" property="alwaysShow" />
+        <result column="create_time" property="createTime" />
+        <result column="operate_time" property="operateTime" />
+    </resultMap>
+
+</mapper>
