@@ -7,6 +7,9 @@
           <element id="module-output" name="commons-manager-web" />
         </element>
         <element id="directory" name="lib">
+          <element id="archive" name="commons-config-1.0-SNAPSHOT.jar">
+            <element id="module-output" name="commons-config" />
+          </element>
           <element id="archive" name="commons-manager-interface-1.0-SNAPSHOT.jar">
             <element id="module-output" name="commons-manager-interface" />
           </element>
