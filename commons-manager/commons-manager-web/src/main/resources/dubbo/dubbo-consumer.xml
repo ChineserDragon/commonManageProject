@@ -12,5 +12,6 @@
     <!--订阅服务接口-->
     <dubbo:reference interface="com.lung.application.inter.RoleService" id="roleServiceImpl" check="false"/>
     <dubbo:reference interface="com.lung.application.inter.TestService" id="testServiceImpl" check="false"/>
+    <dubbo:reference interface="com.lung.application.test.api.IResourceService" id="IResourceServiceImpl" check="false"/>
 
 </beans>

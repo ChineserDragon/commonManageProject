@@ -13,5 +13,6 @@
     <!--  在下面添加需要暴露给其他应用调用的服务  -->
     <dubbo:service interface="com.lung.application.inter.RoleService" ref="roleServiceImpl"/>
     <dubbo:service interface="com.lung.application.inter.TestService" ref="testServiceImpl"/>
+    <dubbo:service interface="com.lung.application.test.api.IResourceService" ref="IResourceServiceImpl"/>
 
 </beans>
