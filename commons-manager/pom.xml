@@ -15,7 +15,7 @@
     <modules>
         <module>commons-manager-dao</module>
         <module>commons-manager-interface</module>
-        <module>commons-manager-pojo</module>
+        <module>commons-manager-model</module>
         <module>commons-manager-service</module>
         <module>commons-manager-web</module>
     </modules>

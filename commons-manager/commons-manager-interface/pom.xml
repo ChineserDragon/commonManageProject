@@ -15,7 +15,7 @@
     <dependencies>
         <dependency>
             <groupId>com.lung</groupId>
-            <artifactId>commons-manager-pojo</artifactId>
+            <artifactId>commons-manager-model</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
