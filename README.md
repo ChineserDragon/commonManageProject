@@ -1,6 +1,6 @@
 # 该分支是dubbo+zookeeper构建的微服务项目
 
-分层多模块web项目
+分层多模块web项目(微服务架构)
 SpringMVC+Spring+mybatis-plus 集成redis
 
 * commons-parent是父级项目管理子项目的maven jar包的版本信息。
@@ -9,7 +9,7 @@ SpringMVC+Spring+mybatis-plus 集成redis
 * commons-manaeger是微服务内聚项目
     * commons-mananger-dao dao层代码(持久层代码在这里，mybatis-plus的Mapper也是放在这里)
     * commons-manager-interface 接口类的存放模块
-    * commons-manager-pojo model和pojo类型的存放路径
+    * commons-manager-model model和pojo类型的存放路径
     * commons-manager-service 服务提供者
     * commons-manager-web 服务消费者
 
