@@ -17,6 +17,15 @@ public class QueueSender {
     //发送消息
     public void sendMessage(Destination destination, final String message) {
         System.out.println("QueueSender发送消息：" + message);
+        /**
+         * 设置超时时间
+         */
+//        jmsQueueTemplate.setTimeToLive(10);
+
+        /**
+         * 设置权重
+         */
+//        jmsQueueTemplate.setPriority(4);
         jmsQueueTemplate.send(destination, new MessageCreator() {
 
             @Override

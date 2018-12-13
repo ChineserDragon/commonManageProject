@@ -13,9 +13,13 @@
     <!-- ActiveMQ连接工厂 -->
     <!-- 由对应的 JMS服务厂商提供的ConnectionFactory -->
     <!-- 连接URL以及用户名，密码 -->
-    <amq:connectionFactory id="amqConnectionFactory"
-                           brokerURL="tcp://localhost:61616" userName="admin" password="admin"/>
-
+    <!--<amq:connectionFactory id="amqConnectionFactory"-->
+                           <!--brokerURL="tcp://localhost:61616" userName="admin" password="admin"/>-->
+    <bean id="amqConnectionFactory" class="org.apache.activemq.spring.ActiveMQConnectionFactory">
+        <property name = "brokerURL" value="tcp://localhost:61616" />
+        <property name = "userName" value="admin" />
+        <property name = "password" value="admin" />
+    </bean>
     <!-- Spring Caching连接工厂 -->
     <!-- Spring用于管理真正的ConnectionFactory -->
     <bean id="connectionFactory"
@@ -43,7 +47,7 @@
     <jms:listener-container destination-type="queue"
                             container-type="default" connection-factory="connectionFactory"
                             acknowledge="auto">
-        <jms:listener destination="testqueue" ref="queueReceiver"/>
+        <jms:listener destination="queue" ref="queueReceiver"/>
         <!--<jms:listener destination="testqueue" ref="queueReceiver2" />-->
     </jms:listener-container>
     <!-- 定义Topic监听器容器 -->

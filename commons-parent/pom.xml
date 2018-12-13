@@ -54,6 +54,7 @@
         <quartz.version>2.2.2</quartz.version>
         <lombok.version>1.18.0</lombok.version>
         <velocity.version>1.7</velocity.version>
+        <activemq.version>5.9.0</activemq.version>
     </properties>
 
     <dependencyManagement>
@@ -314,6 +315,22 @@
                 <version>${lombok.version}</version>
             </dependency>
 
+            <!--整合activeMQ-->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jms</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-pool</artifactId>
+                <version>${activemq.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-all</artifactId>
+                <version>${activemq.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 

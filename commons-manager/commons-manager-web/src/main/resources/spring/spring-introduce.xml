@@ -8,6 +8,8 @@
 
     <import resource="classpath*:spring/applicationContext-config.xml"/>
 
+    <import resource="classpath*:spring/applicationContext-activemq.xml"/>
+
     <import resource="classpath*:dubbo/dubbo-consumer.xml"/>
 
 </beans>
