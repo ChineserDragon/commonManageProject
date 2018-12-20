@@ -20,7 +20,6 @@ public class JsonUtils {
      * <p>Description: </p>
      * @param data
      * @return
-     *
      */
     public static String objectToJson(Object data) {
         try {
