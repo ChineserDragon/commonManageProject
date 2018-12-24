@@ -55,6 +55,7 @@
         <lombok.version>1.18.0</lombok.version>
         <velocity.version>1.7</velocity.version>
         <activemq.version>5.9.0</activemq.version>
+        <ftpclient.verson>3.3</ftpclient.verson>
     </properties>
 
     <dependencyManagement>
@@ -330,6 +331,13 @@
                 <groupId>org.apache.activemq</groupId>
                 <artifactId>activemq-all</artifactId>
                 <version>${activemq.version}</version>
+            </dependency>
+            <!--ftpclient依赖-->
+            <!-- https://mvnrepository.com/artifact/commons-net/commons-net -->
+            <dependency>
+                <groupId>commons-net</groupId>
+                <artifactId>commons-net</artifactId>
+                <version>${ftpclient.verson}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

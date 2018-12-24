@@ -14,5 +14,6 @@
     <dubbo:service interface="com.lung.application.inter.RoleService" ref="roleServiceImpl"/>
     <dubbo:service interface="com.lung.application.inter.TestService" ref="testServiceImpl"/>
     <dubbo:service interface="com.lung.application.test.api.IResourceService" ref="IResourceServiceImpl"/>
+    <dubbo:service interface="com.lung.application.ftpclient.api.UploadFileService" ref="uploadFileServiceImpl"/>
 
 </beans>
