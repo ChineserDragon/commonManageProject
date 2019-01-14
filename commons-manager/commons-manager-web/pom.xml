@@ -89,14 +89,23 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.apache.zookeeper</groupId>-->
+            <!--<artifactId>zookeeper</artifactId>-->
+        <!--</dependency>-->
+        <!-- 由于我们使用zookeeper作为注册中心，所以需要操作zookeeper
+           dubbo 2.6以前的版本引入zkclient操作zookeeper
+           dubbo 2.6及以后的版本引入curator操作zookeeper
+           下面两个zk客户端根据dubbo版本2选1即可 -->
+        <!--<dependency>-->
+            <!--<groupId>com.github.sgroschupf</groupId>-->
+            <!--<artifactId>zkclient</artifactId>-->
+        <!--</dependency>-->
         <dependency>
-            <groupId>org.apache.zookeeper</groupId>
-            <artifactId>zookeeper</artifactId>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
         </dependency>
-        <dependency>
-            <groupId>com.github.sgroschupf</groupId>
-            <artifactId>zkclient</artifactId>
-        </dependency>
+
 
         <!-- JSP相关 -->
         <dependency>

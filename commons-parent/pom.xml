@@ -46,12 +46,15 @@
         <spring-data-redis.version>1.7.1.RELEASE</spring-data-redis.version>
         <solrj.version>4.10.3</solrj.version>
         <!--<dubbo.version>2.5.3</dubbo.version>-->
-        <dubbo.version>2.5.7</dubbo.version>
+        <!--<dubbo.version>2.5.7</dubbo.version>-->
+
         <!-- 由于我们使用zookeeper作为注册中心，所以需要操作zookeeper
             dubbo 2.6以前的版本引入zkclient操作zookeeper
             dubbo 2.6及以后的版本引入curator操作zookeeper
             下面两个zk客户端根据dubbo版本2选1即可 -->
-        <zookeeper.version>3.4.7</zookeeper.version>
+        <dubbo.version>2.6.2</dubbo.version>
+        <zookeeper.version>3.4.11</zookeeper.version>
+        <zk-curator.version>2.12.0</zk-curator.version>
         <zkclient.version>0.1</zkclient.version>
         <activemq.version>5.11.2</activemq.version>
         <freemarker.version>2.3.23</freemarker.version>
@@ -286,7 +289,7 @@
                 <artifactId>solr-solrj</artifactId>
                 <version>${solrj.version}</version>
             </dependency>
-            <!-- dubbo相关 -->
+            <!-- dubbo相关 start-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>dubbo</artifactId>
@@ -297,6 +300,14 @@
                 <artifactId>zookeeper</artifactId>
                 <version>${zookeeper.version}</version>
             </dependency>
+            <!-- curator-framework -->
+            <dependency>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-framework</artifactId>
+                <version>${zk-curator.version}</version>
+            </dependency>
+            <!-- dubbo相关 end-->
+
             <dependency>
                 <groupId>com.github.sgroschupf</groupId>
                 <artifactId>zkclient</artifactId>
