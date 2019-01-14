@@ -3,13 +3,16 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
+    <!--指定当前服务名字-->
     <dubbo:application name="dubbo-project-manager-provider"/>
     <!--  使用zookeeper注册中心暴露服务地址  -->
     <dubbo:registry address="${dubbo.register.address}"/>
+    <!--指定通讯规则-->
     <dubbo:protocol name="dubbo" port="${dubbo.protocol.project.port}"/>
+
     <dubbo:provider delay="-1" timeout="1200000" retries="0"/>
     <!--  注解方式暴露服务  -->
-    <!--  <dubbo:annotation package="com.tecsun.bmb" />  -->
+    <!--  <dubbo:annotation package="com.××××.×××" />  -->
     <!--  在下面添加需要暴露给其他应用调用的服务  -->
     <dubbo:service interface="com.lung.application.inter.RoleService" ref="roleServiceImpl"/>
     <dubbo:service interface="com.lung.application.inter.TestService" ref="testServiceImpl"/>
