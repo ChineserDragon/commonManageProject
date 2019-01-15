@@ -19,4 +19,7 @@
     <dubbo:service interface="com.lung.application.test.api.IResourceService" ref="IResourceServiceImpl"/>
     <dubbo:service interface="com.lung.application.ftpclient.api.UploadFileService" ref="uploadFileServiceImpl"/>
 
+    <!--配置控制中心-->
+    <dubbo:monitor protocol="registry"/>
+
 </beans>

@@ -17,5 +17,7 @@
     <dubbo:reference interface="com.lung.application.ftpclient.api.UploadFileService" id="uploadFileServiceImpl"
                      check="false"/>
 
+    <!--配置控制中心-->
+    <dubbo:monitor protocol="registry"/>
 
 </beans>
