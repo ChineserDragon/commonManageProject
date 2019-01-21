@@ -34,12 +34,8 @@
     <!-- 消息监听器 -->
     <bean id="queueReceiver"
           class="com.lung.application.MQ.queue.QueueReceiver"/>
-    <!--<bean id="queueReceiver2"-->
-    <!--class="com.sgcc.SpringActivemq.mq.consumer.queue.QueueReceiver2"></bean>-->
     <bean id="topicReceiver"
           class="com.lung.application.MQ.topic.TopicReceiver"/>
-    <!--<bean id="topicReceiver2"-->
-    <!--class="com.sgcc.SpringActivemq.mq.consumer.topic.TopicReceiver2"></bean>-->
 
 
     <!-- 消息消费者 start -->
@@ -48,14 +44,12 @@
                             container-type="default" connection-factory="connectionFactory"
                             acknowledge="auto">
         <jms:listener destination="queue" ref="queueReceiver"/>
-        <!--<jms:listener destination="testqueue" ref="queueReceiver2" />-->
     </jms:listener-container>
     <!-- 定义Topic监听器容器 -->
     <jms:listener-container destination-type="topic"
                             container-type="default" connection-factory="connectionFactory"
                             acknowledge="auto">
         <jms:listener destination="topic" ref="topicReceiver"/>
-        <!--<jms:listener destination="topic" ref="topicReceiver2" />-->
     </jms:listener-container>
     <!-- 消息消费者 end -->
 
